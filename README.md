@@ -6,6 +6,8 @@ This archive is distributed in association with the [INFORMS Journal on Computin
 
 The software and data in this repository are a snapshot of the software and data that were used in the research reported on in the paper [Decision Making under Cumulative Prospect Theory: An Alternating Direction Method of Multipliers](https://doi.org/10.1287/ijoc.2023.0243) by Xiangyu Cui, Rujun Jiang, Yun Shi, Rufeng Xiao and Yifan Yan.
 
+**Important: This code is being developed on an on-going basis at https://github.com/RufengXiao/ADMM_CPT. Please go there if you would like to get a more recent version or would like support**
+
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
@@ -34,13 +36,16 @@ The goal of this software is to demonstrate the effectiveness of the ADMM method
 ## Code
 In order to run this software, you must install Gurobi 11.0.0 from https://www.gurobi.com/downloads/gurobi-software/. This code can be run in Matlab R2023b.
 
-In order to run the comparison experiment properly, since its code is written in Python, we recommend referring to `scripts/README.md`.
-
-* `src/coefficients_generating.m`: the code for generating the weights $a_i$ and $b_i$ in our paper.
-* `src/ADMM_CPT_solver.m`: the code for Algorithm 1 in our paper.
-* `src/dynamic_programming.m`: the code for Algorithm 2 and 3 in our paper.
-* `src/PAV_solver.m`,`src/PAV.m`,`src/find_minimizer.m`: the code for Algorithm 4 in our paper.
-* `src/bisectionMethod.m`: the code for finding the root of a function by using binary search.S
+This directory contains the folders `src`，`scripts`，`data` and `results`:
+* `src`: includes the source code of the paper. This folder is organized as follows:
+  * `src/coefficients_generating.m`: the code for generating the weights $a_i$ and $b_i$ in the paper.
+  * `src/ADMM_CPT_solver.m`: the code for Algorithm 1 in the paper.
+  * `src/dynamic_programming.m`: the code for Algorithm 2 and 3 in the paper.
+  * `src/PAV_solver.m`,`src/PAV.m`,`src/find_minimizer.m`: the code for Algorithm 4 in the paper.
+  * `src/bisectionMethod.m`: the code for finding the root of a function by using binary search.
+* `results`: contains the raw results files.
+* `data`: contains the raw data files.
+* `scripts`: contains the scripts used to replicate the experiments in the paper. See the *Replicating* section below for details. `scripts/cptopt` contains the source code for the methods being compared in the paper. See `scripts/README.md` and `scripts/setup.cfg` for the description of this folder.
 
 ## Results
 
@@ -55,4 +60,4 @@ The results are presented in the numerical experiments section of the paper.
 
 ## Support
 
-For support in using this software, submit an [issue](https://github.com/RufengXiao/ADMM_CPT/issues/new).
+For support in using this software, submit an [issue](https://github.com/RufengXiao/ADMM_CPT/issues/new). This code is being developed on an on-going basis at the author's [Github page](https://github.com/RufengXiao/ADMM_CPT).
